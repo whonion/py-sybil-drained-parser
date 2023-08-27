@@ -8,7 +8,8 @@ All wallets(not counting routers and contract addresses) == sybils that in my op
 ```
 0x12476f5e2fde2f2b6179a8a884e4b53ab8fd6105
 ```
-[parse_addresses.json](https://gist.github.com/whonion/7330cfd305a3ad22b1013db812314c8d)
+[parse_addresses.json](https://github.com/whonion/7330cfd305a3ad22b1013db812314c8d)
+
 <details>
   <summary>Mainnet Incoming Addresses:</summary>
     "0x815c5b5682b65c824f6ff30271a41492a367f3f7",<br>
@@ -38,9 +39,17 @@ All addresses have been emptied in the following EVM networks:
  - Avalanche 
  - zkSync Era
 # Methodology
-In my analysis, I used a simple Python script to interact with the etherescan.io API.
+In my analysis, I used a simple Python script to interact with the [etherscan.io](https://etherscan.io) API.
 I parsed out all interactions between this address and other addresses, including Uniswap/1inch routers and token interactions. You can use fine-grained analysis to exclude router and token addresses from this list. Or use Arkham, which specializes in this.
 
+## Also other addresses of scammers (includes first scammer's address):
+```
+0x12476f5e2fde2f2b6179a8a884e4b53ab8fd6105
+0xf106d10b463f4226998d7c9839febef2b4325df0
+0x594cc38bb577f900104bdf3ee53667ebe1fe5f9b
+0xC107e8AD4b3AE3c1A228567a4B61dA7138681FD4
+```
+[sybil_result.json](https://github.com/whonion/py-sybil-drained-parser/blob/main/sybil_result.json)
 ## Rewards Address
 
 ```

@@ -1,7 +1,7 @@
 # data files
-addresses.json
-scammers.txt
-sibil_result.json
+#addresses.json
+#scammers.txt
+#sybil_result.json
 # Binaries for programs and plugins
 *.exe
 *.exe~

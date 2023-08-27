@@ -16,15 +16,20 @@ def read_allocation_csv(filename):
     return addresses
 
 def compare_and_write_result(addresses_json, allocation_csv, output_filename):
-    common_addresses = set(addresses_json) & set(allocation_csv)
-    result = list(common_addresses)
+    common_addresses = {}
+
+    for address, incoming_addresses in addresses_json.items():
+        common_incoming_addresses = set(incoming_addresses) & set(allocation_csv)
+        if common_incoming_addresses:
+            common_addresses[address] = list(common_incoming_addresses)
+
     with open(output_filename, 'w') as json_file:
-        json.dump(result, json_file, indent=4)
+        json.dump(common_addresses, json_file, indent=4)
 
 if __name__ == "__main__":
     addresses_json_file = "addresses.json"
     allocation_csv_file = "allocation.csv"
-    output_result_file = "sibil_result.json"
+    output_result_file = "sybil_result.json"
 
     addresses_json = read_addresses_json(addresses_json_file)
     allocation_csv = read_allocation_csv(allocation_csv_file)
